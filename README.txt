@@ -3,6 +3,9 @@
 3) Start CQLSH {folder}/bin/cqlsh
 4) Execute next CQL code:
 --------- CQL CODE ---------------------------
+CREATE KEYSPACE atlas WITH replication = {'class': 'SimpleStrategy', 'replication_factor': 1};
+use atlas;
+
 CREATE TABLE atlas.poi (
     id bigint,
     parameters map<text, text>,
